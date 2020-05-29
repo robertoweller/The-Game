@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="sheet.css" rel="stylesheet">
+        <title>JogoV4</title>
+    </head>
+    <body onload="Initializer()">
+        <main id="main" >
+            <div id="stage">
+                <div id="robot"></div>
+                <div id="fruit"></div>
+                <div id="player"></div>
+            </div>
+
+            <div id="position">
+                PosiçãoX:
+                <div id="position_X"></div>
+                PosiçãoY:
+                <div id="position_Y"></div>
+            </div>
+
+            <div id="scoreboard">
+                <h1>Placar:</h1>
+                <hr id="bar">
+                <div>
+                    <p>BOT:</p>
+                    <div id="contagem">0 </div>
+                    <div>
+                        <p>Jogador:</p>
+                        <div id="contagem1">0 </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="butn">
+                <button id="btneasy" onclick="easy()">Easy</button>
+                <button id="btnmedium" onclick="medium()">Medium</button>
+                <button id="btnhard" onclick="hard()">Hard</button>
+            </div>
+        </main>
+    </body>
+    <script src="botMoves.js"></script>
+    <script src="playerMoves.js"></script>
+    <script src="gameMode.js"></script>
+    <script src="gameRules.js"></script>
+    <script src="settings.js"></script>
+</html>

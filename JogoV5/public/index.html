@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>JogoV4</title>
+        <style>
+        
+        * {
+            font-family: Arial;
+        }
+        
+        #stage {
+            width: 300px;
+            height: 300px;
+            background: white;
+            box-shadow: 0 0 10px #575757;
+            position: absolute;
+        }
+        
+        .player {
+            background: #005bfa;
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        
+        body {
+            background: #adadad;
+            zoom: 200%;
+        }
+        
+        #fruit {
+            background: red;
+            width: 10px;
+            height: 10px;
+            top: 0px;
+            left: 0px;
+            position: absolute;
+        }
+        
+        #position {
+            color: white;
+            margin-top: 310px;
+            display: inline-block;
+            flex-direction: row;
+        }
+        
+        #scoreboard {
+            margin-top: -410px;
+            margin-left: 320px;
+        }
+        
+        #bar {
+            margin-top: -20px;
+        }
+        </style>
+    </head>
+    <body>
+        <main id="main" >
+            <div id="stage">
+                <div id="fruit"></div>
+            </div>
+
+            <div id="position">
+                PosiçãoX:
+                <div id="position_X"></div>
+                PosiçãoY:
+                <div id="position_Y"></div>
+            </div>
+            
+            <div id="scoreboard">
+                <h1>Placar:</h1>
+                <hr id="bar">
+                <div>
+                    <p>BOT:</p>
+                    <div id="contagem">0 </div>
+                    <div>
+                        <p>Jogador:</p>
+                        <div id="contagem1">0 </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io()
+
+        document.onkeydown = () => {
+            socket.emit('move', event.keyCode)
+        }
+
+        socket.on('playerDisconnected', (id) => {
+            document.getElementById(id).style.visibility = 'hidden'
+
+            socket.emit('playerReset', id)
+        })
+        
+        var enemys = [], itsHere = false
+
+        socket.on('fruitDisappear', () => {
+            document.getElementById('fruit').style.visibility = "hidden"
+        })
+
+        socket.on('fruitAppears', (x, y) => {
+            let fruit = document.getElementById('fruit')
+                fruit.style.visibility = ""
+                fruit.style.top = `${y}px`
+                fruit.style.left = `${x}px`
+        })
+
+        socket.on('Initialize', (id, x, y) => {
+            enemys.forEach(data => {
+                if (id == data) {
+                    let player = document.getElementById(`${id}`)
+                        player.style.top = `${y}px`
+                        player.style.left = `${x}px`
+
+                    itsHere = true
+                    return
+                }
+            })
+            if (itsHere == false) {
+                enemys.push(id)
+
+                let player = document.createElement('div')
+                    player.classList = 'player'
+                    player.id = id
+                    
+                    if (id != socket.id) {
+                        player.style.background = 'green'
+                    }
+
+                    player.style.top = `${y}px`
+                    player.style.left = `${x}px`
+                
+                let stage = document.getElementById('stage')
+                    stage.append(player) 
+        }
+        itsHere = false
+    })
+    </script>
+</html>

@@ -1,0 +1,30 @@
+body, html {
+    width: 95%;
+}
+
+body {
+    font-family: sans-serif;
+    background: #adadad;
+}
+
+canvas {
+    margin-top: 20px;
+    width: 50%;
+    box-shadow: 0px 0px 6px #665;
+}
+
+#score {
+    zoom: 150%;
+    float: left;
+    width: 33%;
+    text-align: center;
+}
+
+hr {
+    width: 14em;
+}
+
+li {
+    margin-left: -38px;
+    list-style: none;
+}

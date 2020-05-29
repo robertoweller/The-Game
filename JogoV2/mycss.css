@@ -1,0 +1,76 @@
+* {
+    font-family: Arial;
+}
+#painel {
+    width: 300px;
+    height: 300px;
+    background: white;
+    box-shadow: 0 0 10px #575757;
+    position: absolute;
+}
+#player {
+    background: #005bfa;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+body {
+    background: #adadad;
+    zoom: 125%;
+}
+#fruit {
+    background: green;
+    width: 10px;
+    height: 10px;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+#position {
+    color: white;
+    margin-top: 310px;
+    display: inline-block;
+    flex-direction: row;
+}
+#placar {
+    margin-top: -410px;
+    margin-left: 320px;
+}
+#barra {
+    margin-top: -20px;
+}
+#nome {
+    padding: 10px;
+    border: 1px black solid;
+    border-radius: 10px;
+    text-transform: capitalize;
+}
+#nomedojogador {
+    margin-top: -19px;
+    margin-left: 16px;
+}
+#btn {
+    cursor: pointer;
+}
+#playerR {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background: red;
+    top: 0;
+    left: 0;
+}
+#botao {
+    margin-left: 320px;
+    margin-top: 10px;
+}
+button {
+    display: flex;
+    width: 70px;
+    justify-content: center;
+}
+button:active {
+    background: yellow;
+}

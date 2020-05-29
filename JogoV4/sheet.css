@@ -1,0 +1,74 @@
+* {
+    font-family: Arial;
+}
+
+#stage {
+    width: 300px;
+    height: 300px;
+    background: white;
+    box-shadow: 0 0 10px #575757;
+    position: absolute;
+}
+
+#player {
+    background: #005bfa;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+body {
+    background: #adadad;
+    zoom: 125%;
+}
+
+#fruit {
+    background: green;
+    width: 10px;
+    height: 10px;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+#position {
+    color: white;
+    margin-top: 310px;
+    display: inline-block;
+    flex-direction: row;
+}
+
+#scoreboard {
+    margin-top: -410px;
+    margin-left: 320px;
+}
+
+#bar {
+    margin-top: -20px;
+}
+
+#btn {
+    cursor: pointer;
+}
+
+#robot {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background: red;
+    top: 0;
+    left: 0;
+}
+
+#butn {
+    margin-left: 320px;
+    margin-top: 10px;
+}
+
+button {
+    display: flex;
+    width: 70px;
+    justify-content: center;
+}

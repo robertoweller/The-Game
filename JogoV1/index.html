@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="mycss.css" rel="stylesheet">
+        <title>Jogo</title>
+    </head>
+    <body onload="boas()">
+        <div id="conta">
+            <input type="text" required placeholder="Insira seu nome" id="nome">
+            <input type="button" value="Enviar" onclick="menu()" id="btn">
+        </div>
+
+        <main id="main">
+            <div id="painel">
+                <div>
+                    <div id="player"></div>
+                    <div id="fruit"></div>
+                </div>
+            </div>
+
+            <div id="position">
+                PosiçãoX:
+                <div id="p"></div>
+                PosiçãoY:
+                <div id="p2"></div>
+            </div>
+
+            <div id="placar">
+                <h1>Placar:</h1>
+                <hr id="barra">
+                <div>
+                    <div id="contagem">0</div>
+                    <div id="nomedojogador"></div>
+                </div>
+            </div>
+        </main>
+    </body>
+    <script src="myscript.js"></script>
+</html>

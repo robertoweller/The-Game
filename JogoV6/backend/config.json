@@ -1,0 +1,14 @@
+{
+    "port": 3000,
+    "enemyColor": "#adadad",
+    "yourColor": "#ff0",
+    "fruitColor": "red",
+    "Pixel": 10,
+    "fruitRespawnTime": 1000,
+    "maxPlayersOnList": 5,
+    "canvas": {
+        "width": 400,
+        "height": 290,
+        "color": "white"
+    }
+}

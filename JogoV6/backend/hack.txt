@@ -1,0 +1,20 @@
+setInterval(() => {
+    var selectedPlayer = players.find(player => player.id == socket.id)
+    
+    if (fruit.posX > selectedPlayer.posX) {
+        socket.emit('keyHasBeenPressed', 'ArrowRight')
+    }
+    else {
+        socket.emit('keyHasBeenPressed', 'ArrowLeft')
+    }
+
+    if (fruit.posY > selectedPlayer.posY) {
+        socket.emit('keyHasBeenPressed', 'ArrowDown')
+    }
+    else {
+        socket.emit('keyHasBeenPressed', 'ArrowUp')
+    }
+}, 10)
+
+Inject this code into the file named: script/setup
+and then into the function named: document.onkeydown

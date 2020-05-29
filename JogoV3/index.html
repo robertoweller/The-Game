@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="mycss.css" rel="stylesheet">
+        <title>JogoV2</title>
+    </head>
+    <body onload="bot()">
+        <main id="main" >
+            <div id="painel">
+                <div>
+                    <div id="player"></div>
+                    <div id="fruit"></div>
+                    <div id="playerR"></div>
+                </div>
+            </div>
+
+            <div id="position">
+                PosiçãoX:
+                <div id="p"></div>
+                PosiçãoY:
+                <div id="p2"></div>
+            </div>
+
+            <div id="placar">
+                <h1>Placar:</h1>
+                <hr id="barra">
+                <div>
+                    <p>BOT:</p>
+                    <div id="contagem">0 </div>
+                    <div>
+                        <p>Jogador:</p>
+                        <div id="contagem1">0 </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="botao">
+                <button id="btneasy" onclick="easy()">Easy</button>
+                <button id="btnmedium" onclick="medium()">Medium</button>
+                <button id="btnhard" onclick="hard()">Hard</button>
+            </div>
+        </main>
+    </body>
+    <script src="myscript.js"></script>
+</html>
