@@ -1,3 +1,3 @@
 # The-Game
 
-![](img/game.png)
+![](game.png)
