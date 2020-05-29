@@ -1,3 +1,3 @@
-#The-Game
+# The-Game
 
-![alt text](https://prnt.sc/sqbwwl)
+![](img/game.png)
